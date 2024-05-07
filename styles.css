@@ -1,0 +1,82 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales */
+
+body {
+    font-family: Outfit;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #552277;
+    color: #f2f2f2;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+#header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header nav ul li {
+    display: inline
+}
+
+#header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.seccion {
+    padding: 50px 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+footer {
+    background-color: #020202;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Estilos específicos */
+
+#header {
+    background-color: #000123;
+    background-image: url(img/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+#contenido {
+    background-color: #000123;
+}
+
+#nosotros {
+    background-color: #000123;
+}
+
+#contacto {
+    background-color: #000123;
+}
+
+h1 {
+    color: #FF0F7B;
+}
+
+
+  
+
+  
