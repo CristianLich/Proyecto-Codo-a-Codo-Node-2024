@@ -11,9 +11,20 @@ body {
 }
 
 header {
+    background-color: #000123;
+    background-image: url(img/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+header {
     background-color: #552277;
     color: #f2f2f2;
 }
+*/
 
 .logo {
     font-size: 28px;
@@ -50,15 +61,6 @@ footer {
 }
 
 /* Estilos específicos */
-
-#header {
-    background-color: #000123;
-    background-image: url(img/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-}
 
 #contenido {
     background-color: #000123;
