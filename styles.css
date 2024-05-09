@@ -1,46 +1,64 @@
 html {
     scroll-behavior: smooth;
 }
+*, *::before, **::after{
+    box-sizing: border-box;
+}
 
 /* Estilos generales */
 
-body {
+* {
     font-family: Outfit;
     margin: 0;
     padding: 0;
 }
 
 header {
+    --bg-image: url(img/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca.jpg);
+    --bg-image-brightness: 50%;
+
     background-color: #000123;
-    background-image: url(img/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca.jpg);
-    background-size: cover;
-    background-position: center;
+    position: relative;
     display: flex;
     justify-content: center;
+    isolation: isolate;
+
+}
+header::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    filter: brightness(var(--bg-image-brightness));
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+
+    /* box-shadow: inset 0px -10px 10px -10px rgba(0, 1, 35 , 0.2), 0px -10px 10px -10px rgba(0, 1, 35 , 0.4);  */
+}
+svg {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 3px solid #000123;
 }
 
-/*
-header {
-    background-color: #552277;
-    color: #f2f2f2;
-}
-*/
 
 .logo {
     font-size: 28px;
 }
 
-#header nav ul {
+header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#header nav ul li {
+header nav ul li {
     display: inline
 }
 
-#header nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
@@ -48,7 +66,7 @@ header {
 }
 
 .seccion {
-    padding: 50px 20px;
+    padding: 48px 20px;
     height: 100vh;
     width: 100vw;
 }
@@ -63,7 +81,7 @@ footer {
 /* Estilos específicos */
 
 #contenido {
-    background-color: #000123;
+    background-color: rgb(0, 1, 35);
 }
 
 #nosotros {
