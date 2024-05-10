@@ -39,9 +39,38 @@
         </div>
 
         <div id="contacto" class="seccion">
-            <h1>Contacto</h1>
-            <!-- Contenido de la sección de contacto -->
+            <div class="container-form">
+                
+                <div class="grid-container-form">
+                    <form id="contactForm" action="#" method="POST" class="form">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+        
+                        <button class="button-form" type="submit">Enviar</button>
+                    </form>
+        
+                    <div class="text-column">
+                        <p>¡Gracias por ponerte en contacto con nosotros! Queremos ayudarte. Por favor, completá el formulario de contacto y te responderemos lo antes posible.</p>
+                        <p>También podés comunicarte con nosotros a través del número: </p>
+                        <p>¿Querés visitarnos? Acercate a... IFRAME</p>
+                    </div>
+                    <div id="error-message"></div>
+            </div>
+        
         </div>
+
     </main>
     
     <footer>
