@@ -25,6 +25,11 @@ html {
     padding: 48px 20px;
     height: 100vh;
     width: 100vw;
+
+    @media (width < 480px){
+        padding: 48px 5px;
+        height: 90vh;
+    }
 }
 footer {
     background-color: #020202;
@@ -50,6 +55,14 @@ header {
     "header header"
     "sidebar main"
     "sidebar main";
+
+    @media (width < 480px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header "
+        "sidebar"
+        "main";
+      }
 }
 header::before {
     content: '';
@@ -62,51 +75,105 @@ header::before {
     background-size: cover;
     background-position: center;
 
-    /* box-shadow: inset 0px -10px 10px -10px rgba(0, 1, 35 , 0.2), 0px -10px 10px -10px rgba(0, 1, 35 , 0.4);  */
 }
 header nav {
     grid-area: header;
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-
+        
         li {
-            display: inline;
+            display: inline-block;
 
             a {
                 color: #fff;
                 text-decoration: none;
-                font-size: 2rem;
-                margin-left: 1.5rem;
+                /* font-size: 2rem; */
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                margin-left: .9em;
             }
         }
     }
+
+    @media (width < 480px) {
+        justify-content: start;
+    }
 }
 
 
-header .header-content {
+header .header-text {
     grid-area: sidebar;
 
     h1 {
-        font-size: clamp(2.5rem, 3.5vw, 5rem);
+        font-size: clamp(2rem, 3.5vw, 5rem);
         color: var(--color-texto-header);
     }
     p {
-        font-size: clamp(1.5rem, 6.5vw, 5.5rem);
+        font-size: clamp(2rem, 5vw, 5rem);
         color: var(--color-texto-parrafos);
         margin-top: 2rem;
+        text-align: center;
     }
 }
 
+header .header-info {
+    color: #FFF;
+
+    img {
+        min-width: 100px;
+        max-width: 40%;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+
+    .header-info_text {
+        grid-column: 1/4;
+        justify-self: center;
+        align-self: center;
+
+        width: 60%;
+        text-align: center;
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+
+        @media (width < 480px){
+            width: 90%;
+        }
+    }
+    .header-info_PC {
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: center;
+        align-self: end;
+    }
+    .header-info_PS {
+        grid-row: 3;
+        justify-self: end;
+    }
+    .header-info_Xbox {
+        grid-row: 3;
+        grid-column: 3;
+    }
+    .neon-button {
+        grid-row: 4;
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    
+}
 
 svg {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
     border-bottom: 3px solid var(--color-primario);
 }
 .neon-button {
