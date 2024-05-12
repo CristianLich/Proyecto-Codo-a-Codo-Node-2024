@@ -260,6 +260,89 @@ svg {
 
 
 
+/*------------------------------FORMULARIO------------------------------ */
+
+
+.container-form {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+
+
+.contact-title {
+    text-align: center;
+}
+
+.grid-container-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-form[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FF0F7B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-form[type="submit"]:hover {
+    background-color: #6200b3;
+}
+
+.text-column {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .grid-container-form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
   
 
   
