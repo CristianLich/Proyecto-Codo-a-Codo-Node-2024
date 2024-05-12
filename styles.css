@@ -4,6 +4,9 @@ html {
 *, *::before, **::after{
     box-sizing: border-box;
 }
+* {
+    box-sizing: border-box;
+}
 
 /* Estilos generales */
 :root {
@@ -26,10 +29,17 @@ html {
     height: 100vh;
     width: 100vw;
 
+    @media (width <= 800px) {
+        height: 100%;
+    }
+
     @media (width < 480px){
         padding: 48px 5px;
         height: 90vh;
     }
+}
+.seccion:first-child{
+    padding: 15px 20px;
 }
 footer {
     background-color: #020202;
@@ -81,7 +91,12 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    h1 {
+        font-size: clamp(2rem, 3.5vw, 5rem);
+        color: var(--color-texto-header);
+        margin-right: 1em;
+    }
+
     ul {
         list-style-type: none;
         margin: 0;
@@ -97,27 +112,39 @@ header nav {
                 font-size: clamp(1rem, 2.5vw, 2rem);
                 margin-left: .9em;
             }
+            a:hover {
+                color: #fff;
+                text-shadow: 0 0 10px #FFF,
+                             0 0 20px #FFF,
+                             0 0 40px #FFF,
+                             0 0 80px #FFF,
+                             0 0 120px #FFF;
+            }
         }
     }
 
     @media (width < 480px) {
         justify-content: start;
+
+        h1{
+            display: none;
+        }
     }
 }
-
 
 header .header-text {
     grid-area: sidebar;
 
-    h1 {
-        font-size: clamp(2rem, 3.5vw, 5rem);
-        color: var(--color-texto-header);
-    }
     p {
         font-size: clamp(2rem, 5vw, 5rem);
         color: var(--color-texto-parrafos);
         margin-top: 2rem;
-        text-align: center;
+    }
+
+    @media (width < 480px) {
+        p {
+            text-align: center;
+        }
     }
 }
 
@@ -177,16 +204,16 @@ svg {
     border-bottom: 3px solid var(--color-primario);
 }
 .neon-button {
-    font-size: 2rem;
-    width: 4rem;
-    height: 2rem;
+    font-size: 1.4em;
+    width: 4em;
+    height: 2em;
+    padding: 0.25em 0.5em;
     display: inline-block;
     cursor: pointer;
+    border-radius: 0.25em;
     text-decoration: none;
     color: var(--clr-neon);
     border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
   
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
   
