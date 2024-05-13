@@ -126,9 +126,9 @@ svg {
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
   
     position: relative;
-  }
+}
   
-  .neon-button::before {
+.neon-button::before {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -141,9 +141,9 @@ svg {
     transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
     filter: blur(1em);
     opacity: 0.7;
-  }
+}
   
-  .neon-button::after {
+.neon-button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -155,22 +155,22 @@ svg {
     background-color: var(--clr-neon);
     z-index: -1;
     transition: opacity 100ms linear;
-  }
+}
   
-  .neon-button:hover,
-  .neon-button:focus {
+.neon-button:hover,
+.neon-button:focus {
     color: var(--clr-bg);
     text-shadow: none;
-  }
+}
   
   .neon-button:hover::before,
   .neon-button:focus::before {
     opacity: 1;
-  }
-  .neon-button:hover::after,
-  .neon-button:focus::after {
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
     opacity: 1;
-  }
+}
 
 /* FIN DE ESTILOS DEL INICIO */
 
@@ -189,6 +189,66 @@ svg {
 #contacto {
     background-color: var(--color-primario);
 }
+
+#main
+{
+    background-color: var(--color-tex);
+    padding: 50px 0 ;
+}
+
+#bienvenidos {
+    color: var(--color-texto-parrafos);
+    font-size: 30px;
+}
+#bienvenidos span
+{
+    color:var(--clr-neon)
+}
+.nos-conteiner
+{
+    justify-content: center;
+    margin-top: 50px;
+    background-color:var(--color-primario);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#nosotros p
+{
+    
+    font-size: 15px;
+    color: var(--color-texto-parrafos);
+    text-align: justify;    
+}
+#nosotros h3
+{
+font-size: 20px;
+text-align: center;
+color: var(--clr-neon)
+}
+
+.nos
+{
+    text-align: justify;
+    width:  300px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--clr-bg);
+    border-radius: 15px;
+    border: 2px solid var(--clr-neon) ; 
+    transition: 0.25s;
+}
+.nos:hover
+{
+    box-shadow: 0 0 30px var(--clr-neon);
+    border: 3px solid var(--clr-color);
+}
+
+
+
 
 
 
