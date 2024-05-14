@@ -372,11 +372,11 @@ color: var(--clr-neon)
 
 .form {
     background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    
 }
 
 .form-group {
@@ -404,22 +404,23 @@ textarea {
     width: 100%;
     padding: 10px;
     background-color: #FF0F7B;
-    color: #f2f2f2;
+    color: #020202;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .button-form[type="submit"]:hover {
-    background-color: #6200b3;
+    background-color: #00FFC9;
 }
 
 .text-column {
     background-color: #f2f2f2;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
 }
 
 @media (min-width: 768px) {
