@@ -12,7 +12,7 @@ html {
 :root {
     --color-primario: #000123;
     --color-texto-header: #FF0F7B;
-    --color-texto-parrafos: #FFF;
+    --color-texto-parrafos: #f2f2f2;
     --clr-neon: hsl(317 100% 54%);
     --clr-bg: hsl(323 21% 16%);
 }
@@ -59,12 +59,11 @@ header {
     isolation: isolate;
 
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 4fr 3fr;
     grid-template-rows: 100px 1fr;
     grid-template-areas:
     "header header"
-    "sidebar main"
-    "sidebar main";
+    "main sidebar";
 
     @media (width < 480px) {
         grid-template-columns: 1fr;
@@ -89,7 +88,7 @@ header::before {
 header nav {
     grid-area: header;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     h1 {
         font-size: clamp(2rem, 3.5vw, 5rem);
@@ -106,19 +105,19 @@ header nav {
             display: inline-block;
 
             a {
-                color: #fff;
+                color: #f2f2f2;
                 text-decoration: none;
                 /* font-size: 2rem; */
-                font-size: clamp(1rem, 2.5vw, 2rem);
-                margin-left: .9em;
+                font-size: clamp(1rem, 2vw, 2rem);
+                margin-right: 1em;
             }
             a:hover {
-                color: #fff;
-                text-shadow: 0 0 10px #FFF,
-                             0 0 20px #FFF,
-                             0 0 40px #FFF,
-                             0 0 80px #FFF,
-                             0 0 120px #FFF;
+                color: #f2f2f2;
+                text-shadow: 0 0 10px #f2f2f2,
+                             0 0 20px #f2f2f2,
+                             0 0 40px #f2f2f2,
+                             0 0 80px #f2f2f2,
+                             0 0 120px #f2f2f2;
             }
         }
     }
@@ -149,16 +148,16 @@ header .header-text {
 }
 
 header .header-info {
-    color: #FFF;
+    color: #f2f2f2;
 
     img {
         min-width: 100px;
         max-width: 40%;
     }
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,1fr);
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr); */
 
     .header-info_text {
         grid-column: 1/4;
@@ -173,7 +172,7 @@ header .header-info {
             width: 90%;
         }
     }
-    .header-info_PC {
+    /* .header-info_PC {
         grid-row: 2;
         grid-column: 2;
         justify-self: center;
@@ -186,7 +185,7 @@ header .header-info {
     .header-info_Xbox {
         grid-row: 3;
         grid-column: 3;
-    }
+    } */
     .neon-button {
         grid-row: 4;
         grid-column: 2;
@@ -205,7 +204,7 @@ svg {
 }
 .neon-button {
     font-size: 1.4em;
-    width: 4em;
+    width: 9.2em;
     height: 2em;
     padding: 0.25em 0.5em;
     display: inline-block;
@@ -255,6 +254,7 @@ svg {
 .neon-button:focus {
     color: var(--clr-bg);
     text-shadow: none;
+    z-index: 2;
 }
   
   .neon-button:hover::before,
@@ -311,14 +311,14 @@ svg {
 
 #nosotros p
 {
-    
-    font-size: 15px;
+    font-family: Outfit;
+    font-size: 0.75rem;
     color: var(--color-texto-parrafos);
     text-align: justify;    
 }
 #nosotros h3
 {
-font-size: 20px;
+font-size: 1rem;
 text-align: center;
 color: var(--clr-neon)
 }
@@ -326,8 +326,7 @@ color: var(--clr-neon)
 .nos
 {
     text-align: justify;
-    width:  300px;
-    height: 300px;
+    width:  33%;
     margin: 20px;
     padding: 20px;
     background-color: var(--clr-bg);
@@ -372,7 +371,7 @@ color: var(--clr-neon)
 }
 
 .form {
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -405,7 +404,7 @@ textarea {
     width: 100%;
     padding: 10px;
     background-color: #FF0F7B;
-    color: #fff;
+    color: #f2f2f2;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -417,7 +416,7 @@ textarea {
 }
 
 .text-column {
-    background-color: #fff;
+    background-color: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
