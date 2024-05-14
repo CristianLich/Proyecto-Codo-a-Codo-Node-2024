@@ -299,6 +299,8 @@ svg {
 #bienvenidos {
     color: var(--color-texto-parrafos);
     font-size: 30px;
+    text-align: center;
+    
 }
 #bienvenidos span
 {
