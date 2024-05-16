@@ -64,3 +64,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //--------------------------------------------------------------------------
+
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.querySelector('.slides');
+    const totalSlides = slides.length;
+
+    function showSlides(n) {
+        slideIndex = (n + totalSlides) % totalSlides;
+        slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    function changeSlide(n) {
+        showSlides(slideIndex + n);
+        resetAutoSlide();
+    }
+
+    function autoSlide() {
+        autoSlideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 4000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlide();
+    }
+
+    let autoSlideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 4000);
+
+    showSlides(slideIndex);
