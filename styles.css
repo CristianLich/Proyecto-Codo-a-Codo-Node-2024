@@ -80,8 +80,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: orbitron;
-
+  font-family: Outfit;
+  flex-wrap: wrap;
 }
 
 header p {
@@ -97,7 +97,11 @@ header nav ul {
   list-style: none;
   display: flex;
   margin: 0;
-  padding-right: 20px;
+  padding-right: 1.25rem;
+
+  @media (width < 480px){
+    padding: 0;
+  }
 }
 
 header nav ul li {
@@ -108,13 +112,30 @@ header nav ul li {
 header nav ul li a {
   color: var(--color-acento);
   text-decoration: none;
-  font-size: xx-large;
+  font-size: clamp(1.5rem, 2.3vw, 4rem);
+}
+header nav ul li a:hover {
+  color: #f2f2f2;
+  text-shadow: 0 0 10px #f2f2f2,
+               0 0 20px #f2f2f2,
+               0 0 40px #f2f2f2,
+               0 0 80px #f2f2f2,
+               0 0 120px #f2f2f2;
 }
 
 .logotipo {
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media (width < 480px ){
+      p {
+        display: none;
+      }
+      img {
+        margin-left: 1rem;
+      }
+  }
 }
 
 
@@ -130,7 +151,6 @@ header nav ul li a {
 }
 
 .home-text {
-  font-size: clamp(2rem, 5vw, 5rem);
   color: var(--color-textos);
   font-family: orbitron;
   text-align: end;
@@ -139,8 +159,9 @@ header nav ul li a {
   padding: 20px;
 }
 .home-text p {
+  
+  font-size: clamp(2rem, 4.2vw, 5rem);
   color: white;
-  font-size: 24px;
   font-weight: bold;
 }
 
@@ -403,7 +424,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 2em;
   background-color: #151414;
   bottom: 0;
