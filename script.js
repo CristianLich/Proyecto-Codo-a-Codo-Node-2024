@@ -1,5 +1,5 @@
 
-//--------------- Sección CONTACTANOS - FORMULARIO
+//--------------- SECTION CONTACTANOS - FORMULARIO ---------------
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
@@ -63,7 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//--------------------------------------------------------------------------
+
+
+//--------------- SECTION CONTENIDO - SLIDER ---------------
+
 
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
@@ -96,3 +99,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 4000);
 
     showSlides(slideIndex);
+

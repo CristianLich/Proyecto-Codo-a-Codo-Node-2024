@@ -8,20 +8,18 @@ body {
 }
 
 /* Estilos generales */
+
 :root {
   --color-primario: #000123;
   --color-secundario: #FF0F7B;
   --color-acento: #00FFC9;
   --color-textos: #f2f2f2;
   --color-negro: #101010;
-
-
   --color-neon: hsl(317 100% 54%);
-
 }
 
 
-/*---------------------------- SECTIONS ----------------------------*/
+/*-------------------------------------------------------- SECTIONS --------------------------------------------------------*/
 
 
 #inicio {
@@ -43,18 +41,17 @@ body {
 }
 
 #inicio h1 {
-  color: #f2f2f2;
+  color:var(--color-textos);
   font-family: outfit;
-
 }
 
 #contenido h1 {
-  color: #f2f2f2;
+  color: var(--color-textos);
   font-family: outfit;
 }
 
 #contacto h1 {
-  color: #f2f2f2;
+  color: var(--color-textos);
   font-family: outfit;
   text-align: center;
 }
@@ -67,7 +64,8 @@ section {
 }
 
 
-/*---------------------------- HEADER ----------------------------*/
+/*-------------------------------------------------------- HEADER --------------------------------------------------------*/
+
 header {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
@@ -111,7 +109,7 @@ header nav ul li {
 header nav ul li a {
   color: var(--color-acento);
   text-decoration: none;
-  font-size: clamp(1.5rem, 2.3vw, 4rem);
+  font-size: xx-large;
 }
 header nav ul li a:hover {
   color: #f2f2f2;
@@ -138,9 +136,8 @@ header nav ul li a:hover {
 }
 
 
+/*-------------------------------------------------------- INICIO ----------------------------*/
 
-
-/*---------------------------- INICIO ----------------------------*/
 #inicio {
   background-image: url('https://res.cloudinary.com/dkojgz9s6/image/upload/v1715800847/CodoACodoNJS/background_regenerado_en7lye.jpg');
   background-size: cover;
@@ -157,14 +154,12 @@ header nav ul li a:hover {
   grid-row: 2;
   padding: 20px;
 }
-.home-text p {
-  
+
+.home-text p { 
   font-size: clamp(2rem, 4.2vw, 5rem);
   color: white;
   font-weight: bold;
 }
-
-
 
 /*---------------------------- Botón Neon ----------------------------*/
 
@@ -173,8 +168,6 @@ header nav ul li a:hover {
   grid-row: 3;
   justify-self: center;
   place-items: center;
-
-
   font-size: 1.4em;
   width: 9.2em;
   height: 1.1em;
@@ -184,11 +177,8 @@ header nav ul li a:hover {
   text-decoration: none;
   color: var(--color-acento);
   border: var(--color-neon) 0.125em solid;
-
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
   box-shadow: inset 0 0 0.5em 0 var(--color-neon), 0 0 0.5em 0 var(--color-neon);
-
   position: relative;
 }
 
@@ -239,14 +229,12 @@ header nav ul li a:hover {
 }
 
 
+/*-------------------------------------------------------- CONTENIDO --------------------------------------------------------*/
 
-/*---------------------------- CONTENIDO ----------------------------*/
-
-
-/* ESTILOS JUEGOS */
 #contenido {
   max-height: 1200px;
 }
+
 .centrar{
   display: flex;
   flex-direction: column;
@@ -263,6 +251,7 @@ header nav ul li a:hover {
   text-align: center;
 }
 
+/*
 .iconos{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -271,14 +260,23 @@ header nav ul li a:hover {
   max-width: 400px;
   padding: 10px;
 }
+*/
+.iconos {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
 /* PADRE */
 
 .slider {
+  margin-top: 20px;
   display: flex;
   position: relative;
   max-width: 1200px;
   padding: 20px;
-  height: 800px;
+  height: 600px;
   overflow: hidden;
   color: var(--color-texto-parrafos);
   background-color: var(--color-primario);
@@ -316,7 +314,6 @@ header nav ul li a:hover {
   color: var(--color-textos);
 }
 
-
 .slide img {
   width: 100%;
   max-width: 100%;
@@ -340,8 +337,7 @@ header nav ul li a:hover {
   transition: background-color 0.6s ease;
   border-radius: 15%; 
   user-select: none;
-  background-color: var(--color-primario);
-  
+  background-color: var(--color-primario);  
 }
 
 .next {
@@ -352,6 +348,7 @@ header nav ul li a:hover {
 .prev {
   left:0;
 }
+
 .prev:hover, .next:hover {
   background-color: var(--color-neon);
 }
@@ -383,7 +380,6 @@ header nav ul li a:hover {
 }
 
 
-
 @media (max-width: 480px) {
   .slider {
       height: auto;
@@ -405,11 +401,7 @@ header nav ul li a:hover {
   }
 }
 
-
-
-/* FIN ESTILOS JUEGOS */
-
-/*---------------------------- NOSOTROS ----------------------------*/
+/*-------------------------------------------------------- NOSOTROS --------------------------------------------------------*/
 
 #nosotros {
   color: var(--color-textos);
@@ -438,7 +430,7 @@ header nav ul li a:hover {
   text-align: justify;
 }
 
-#nosotros h3 {
+.card-us h3 {
   font-size: 1rem;
   text-align: center;
   color: var(--color-neon);
@@ -470,12 +462,13 @@ header nav ul li a:hover {
   }
 }
 
+#nosotros h5 {
+  color: var(--color-secundario);
+  padding: 20px;
+}
 
 
-
-
-
-/*---------------------------- CONTACTO ----------------------------*/
+/*-------------------------------------------------------- CONTACTO --------------------------------------------------------*/
 
 .container-form {
   max-width: 1200px;
@@ -483,7 +476,7 @@ header nav ul li a:hover {
   padding: 20px;
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
   box-sizing: border-box;
 }
 
@@ -500,7 +493,7 @@ header nav ul li a:hover {
 }
 
 .form {
-  background-color: #f2f2f2;
+  background-color: var(--color-textos);
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -537,7 +530,7 @@ textarea {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #FF0F7B;
+  background-color: var(--color-secundario);
   color: #020202;
   font-family: outfit;
   font-weight: bold;
@@ -552,9 +545,9 @@ textarea {
 }
 
 .text-column {
-  background-color: #f2f2f2;
+  background-color: var(--color-textos);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
@@ -573,12 +566,7 @@ textarea {
   margin-top: 20px;
 }
 
-
-
-
-
-
-/*---------------------------- FOOTER ----------------------------*/
+/*-------------------------------------------------------- FOOTER --------------------------------------------------------*/
 
 footer {
   display: flex;
