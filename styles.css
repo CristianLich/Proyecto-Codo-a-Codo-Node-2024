@@ -149,9 +149,13 @@ header nav ul li a:hover {
   background-image: url('https://res.cloudinary.com/dkojgz9s6/image/upload/v1715800847/CodoACodoNJS/background_regenerado_en7lye.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; /* Hace que la sección ocupe toda la altura de la ventana */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 
 .home-text {
   color: var(--color-textos);
