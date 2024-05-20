@@ -63,40 +63,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// SECTION CONTENIDO
 
-
-//--------------- SECTION CONTENIDO - SLIDER ---------------
-
-
-    let slideIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
-    const slidesContainer = document.querySelector('.slides');
-    const totalSlides = slides.length;
 
-    function showSlides(n) {
-        slideIndex = (n + totalSlides) % totalSlides;
-        slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    function showSlide(index) {
+        if (index >= slides.length) currentSlide = 0;
+        if (index < 0) currentSlide = slides.length - 1;
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[currentSlide].style.display = 'flex';
     }
 
-    function changeSlide(n) {
-        showSlides(slideIndex + n);
-        resetAutoSlide();
+    function changeSlide(direction) {
+        currentSlide += direction;
+        showSlide(currentSlide);
     }
 
-    function autoSlide() {
-        autoSlideInterval = setInterval(() => {
-            changeSlide(1);
-        }, 4000);
-    }
+    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
 
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlide();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        showSlide(currentSlide);
+    });
+});
 
-    let autoSlideInterval = setInterval(() => {
-        changeSlide(1);
-    }, 4000);
 
-    showSlides(slideIndex);
+
 
