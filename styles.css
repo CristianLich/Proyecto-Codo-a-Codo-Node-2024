@@ -150,7 +150,6 @@ header nav ul li a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
   height: 100vh; /* Hace que la sección ocupe toda la altura de la ventana */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -297,7 +296,7 @@ header nav ul li a:hover {
 
 .main-img {
   max-width: 80%;
-  height: 250px;
+  height: 300px;
   border-radius: 20px;
   
 }
@@ -360,6 +359,7 @@ button.next:hover {
   
   .main-img {
     width: 90%;
+    height: ;
   }
   
   .zocalo {
