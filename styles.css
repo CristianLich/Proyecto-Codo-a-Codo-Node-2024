@@ -387,65 +387,24 @@ button.next:hover {
   }
 }
 
-/* PREV NEXT BUTTONS */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: var(--color-acento);
-  font-weight: bold;
-  font-size: 18px;
-  transition: background-color 0.6s ease;
-  border-radius: 15%; 
-  user-select: none;
-  background-color: var(--color-primario);  
-}
 
-.next {
-  right: 0;
-  /* border-radius: 3px 0 0 3px; */
-}
+/* BOTON BOTON BOTON BOTON */
 
-.prev {
-  left:0;
-}
-
-.prev:hover, .next:hover {
-  background-color: var(--color-neon);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
+#boton-arriba {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 85%;
+  left: 90%;
+  background-color:var(--color-acento);
+  border-radius: 30%;
+  text-align: center;
+  padding: 0.5em;
+  z-index: 999;
   
-  
-  .zocalo {
-    padding-top: 16px;
-    flex-direction: column;
-    height: auto;
-    align-items: center; /* Centrar elementos verticalmente */
-    width: 100%; /* Asegurar que el contenedor .zocalo ocupe todo el ancho */
-  }
 
-  .zocalo img {
-    height: auto;
-    max-width: 80%; /* Ajustar el tamaño máximo de las imágenes al 100% del contenedor */
-    height: auto; /* Mantener la proporción de aspecto de las imágenes */
-    padding-top: ;
-    
-  }
-
-  .slider-container {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width:  80%;/* Ajustar el ancho automáticamente según el contenido */
-    padding: 0; /* Eliminar cualquier relleno para evitar el desbordamiento */
-    margin: 0 16px; /* Añadir margen a los lados */
-
-  }
 }
+
 
 
 /*-------------------------------------------------------- NOSOTROS --------------------------------------------------------*/
