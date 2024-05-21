@@ -426,7 +426,7 @@ button.next:hover {
 }
 
 #boton-arriba:hover {
-  background-color: #0056b3;
+  background-color: var(--color-secundario);
 }
 
 #boton-arriba img {
@@ -620,5 +620,18 @@ footer {
   padding: 2em;
   background-color: var(--color-negro);
   bottom: 0;
+}
 
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color:var(--color-secundario);
+}
+
+.social-icons i {
+  font-size: 2em;
 }
