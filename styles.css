@@ -178,7 +178,7 @@ header nav ul li a:hover {
   grid-row: 3;
   justify-self: center;
   place-items: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   width: 9.2em;
   height: 1.1em;
   padding: 0.25em 0.5em;
@@ -190,6 +190,12 @@ header nav ul li a:hover {
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
   box-shadow: inset 0 0 0.5em 0 var(--color-neon), 0 0 0.5em 0 var(--color-neon);
   position: relative;
+}
+
+@media (max-width: 480px) {
+  .neon-button{
+    font-size: 1em;
+  }
 }
 
 .neon-button::before {
@@ -295,7 +301,7 @@ header nav ul li a:hover {
 }
 
 .main-img {
-  max-width: 80%;
+  max-width: 90%;
   height: 300px;
   border-radius: 20px;
   
@@ -358,6 +364,7 @@ button.next:hover {
   
   .main-img {
     width: 90%;
+    height: auto;
   }
   
   .zocalo {
@@ -420,6 +427,15 @@ button.next:hover {
 #boton-arriba img {
   width: 70%;
   height: 80%;
+}
+
+@media (max-width:480px) {
+  #boton-arriba {
+  width: 20px;
+  height: 20px;
+  top: 85%;
+  left: 90%;
+  }
 }
 
 
@@ -597,6 +613,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 2em;
-  background-color: #151414;
+  background-color: var(--color-negro);
   bottom: 0;
+
 }
