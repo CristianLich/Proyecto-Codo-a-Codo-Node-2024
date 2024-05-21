@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var seccionInicio = document.getElementById("inicio");
         var scrollY = window.scrollY || window.pageYOffset;
 
-        // Si el scroll está más abajo de la sección de inicio, mostrar el botón
+        // Si el scroll está más abajo de la sección de inicio, mostrar el botón :D
         if (scrollY > seccionInicio.offsetHeight) {
             botonArriba.style.display = "block";
         } else {
@@ -113,4 +113,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 

@@ -109,15 +109,18 @@ header nav ul li {
   
 }
 
+
 header nav ul li a {
   color: var(--color-acento);
   text-decoration: none;
   font-size: xx-large;
+  transition: color 0.3s ease;
 
   @media (width < 768px){
     font-size: 1.2rem;
   }
 }
+
 header nav ul li a:hover {
   color: #f2f2f2;
   text-shadow: 0 0 10px #f2f2f2,
@@ -126,6 +129,7 @@ header nav ul li a:hover {
                0 0 80px #f2f2f2,
                0 0 120px #f2f2f2;
 }
+
 
 .logotipo {
   display: flex;
@@ -612,9 +616,8 @@ textarea {
 
 /*-------------------------------------------------------- FOOTER --------------------------------------------------------*/
 
-footer {
+#footer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2em;
@@ -622,16 +625,23 @@ footer {
   bottom: 0;
 }
 
-.social-icons a {
+/* Estilos para los iconos de redes sociales en el footer */
+
+#footer .social-icons {
+  display: flex;
+}
+
+#footer .social-icons a {
   margin: 0 10px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  color: #00FFC9;
 }
 
-.social-icons a:hover {
-  color:var(--color-secundario);
+#footer .social-icons a:hover {
+  color: var(--color-secundario); /* Cambia el color al color secundario al hacer hover */
 }
 
-.social-icons i {
-  font-size: 2em;
+#footer .social-icons i {
+  font-size: 2em; 
 }
