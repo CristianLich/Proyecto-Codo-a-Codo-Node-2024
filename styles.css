@@ -194,9 +194,9 @@ header nav ul li a:hover {
 
 @media (max-width: 480px) {
   .neon-button {
-    font-size: 0.8em;
+    font-size: 1em;
     width: 7.5em;
-    height: 1.8em;
+    height: 2em;
     padding: 0.2em 0.4em;
     text-align: center;
   }
