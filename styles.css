@@ -310,7 +310,7 @@ header nav ul li a:hover {
 }
 
 .main-img {
-  max-width: 90%;
+  max-width: 80%;
   height: 300px;
   border-radius: 20px;
   
@@ -331,6 +331,16 @@ header nav ul li a:hover {
   max-width: 20%;
   border-radius: 20px;
   object-fit:contain;
+}
+  
+@media screen and (min-width: 768px) {
+  .zocalo img {
+    transition: transform 0.3s ease; 
+  }
+
+  .zocalo img:hover {
+    transform: scale(1.5); /* Escala la imagen al 120% en el efecto hover */
+  }
 }
 
 button.prev,
