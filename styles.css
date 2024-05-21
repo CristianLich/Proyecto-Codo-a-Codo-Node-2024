@@ -178,9 +178,9 @@ header nav ul li a:hover {
   grid-row: 3;
   justify-self: center;
   place-items: center;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 9.2em;
-  height: 1.1em;
+  height: 1.2em;
   padding: 0.25em 0.5em;
   cursor: pointer;
   border-radius: 10px;
