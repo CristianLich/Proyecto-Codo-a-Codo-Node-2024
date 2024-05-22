@@ -159,10 +159,12 @@ header nav ul li a:hover {
   grid-row: 3;
   justify-self: center;
   place-items: center;
-  font-size: 1em;
-  width: 9.2em;
-  height: 1.2em;
-  padding: 0.25em 0.5em;
+  text-align: center;
+  font-family: outfit;
+  font-size: 1.5em;
+  width: 40%;
+  height: 2em;
+  padding:  0.5em;
   cursor: pointer;
   border-radius: 10px;
   text-decoration: none;
@@ -171,6 +173,7 @@ header nav ul li a:hover {
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
   box-shadow: inset 0 0 0.5em 0 var(--color-neon), 0 0 0.5em 0 var(--color-neon);
   position: relative;
+
 }
 
 @media (max-width: 480px) {
@@ -178,7 +181,7 @@ header nav ul li a:hover {
     font-size: 1em;
     width: 7.5em;
     height: 2.5em;
-    padding: 0.2em 0.4em;
+    padding: 0.4em;
     text-align: center;
     justify-content: center;
   }
@@ -327,9 +330,10 @@ button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: #00FFC9;
+  color: var(--color-negro);
   border: none;
+  border-radius: 5px;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
@@ -346,7 +350,8 @@ button.next {
 
 button.prev:hover,
 button.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-textos);
+  background-color: var(--color-secundario);
 }
 
 /* Media Queries */
@@ -577,6 +582,8 @@ textarea {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  filter: drop-shadow(#000123 2px 2px 5px);
+  box-shadow: #000123;
 }
 
 .button-form[type="submit"]:hover {
@@ -628,13 +635,11 @@ textarea {
   margin: 0 10px;
   text-decoration: none;
   transition: color 0.3s ease;
-  /* Transición suave para el cambio de color */
   color: #00FFC9;
 }
 
 #footer .social-icons a:hover {
   color: var(--color-secundario);
-  /* Cambia el color al color secundario al hacer hover */
 }
 
 #footer .social-icons i {
