@@ -15,7 +15,7 @@ body {
   --color-acento: #00FFC9;
   --color-textos: #f2f2f2;
   --color-negro: #101010;
-  --color-neon: hsl(317 100% 54%);
+  --color-neon: #ff14bd;
 }
 
 /*-------------------------------------------------------- SECTIONS --------------------------------------------------------*/
@@ -32,7 +32,7 @@ body {
   font-family: outfit;
 }
 
-#contacto h1 {
+#contacto h2 {
   text-align: center;
   color: var(--color-textos);
 }
