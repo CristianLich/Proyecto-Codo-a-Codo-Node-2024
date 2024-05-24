@@ -15,7 +15,7 @@ body {
   --color-acento: #00FFC9;
   --color-textos: #f2f2f2;
   --color-negro: #101010;
-  --color-neon: #ff14bd;
+  --color-neon: hsl(317, 100%, 54%);
 }
 
 /*-------------------------------------------------------- SECTIONS --------------------------------------------------------*/
@@ -160,82 +160,81 @@ header nav ul li a:hover {
 /*---------------------------- Botón Neon ----------------------------*/
 
 .neon-button {
-  grid-column: 3;
-  grid-row: 3;
-  justify-self: center;
-  place-items: center;
-  text-align: center;
-  font-family: outfit;
-  font-size: 1.5em;
-  width: 40%;
-  height: 2em;
-  padding:  0.5em;
-  cursor: pointer;
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--color-acento);
-  border: var(--color-neon) 0.125em solid;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: inset 0 0 0.5em 0 var(--color-neon), 0 0 0.5em 0 var(--color-neon);
-  position: relative;
+      grid-column: 3;
+      grid-row: 3;
+      justify-self: center;
+      place-items: center;
+      text-align: center;
+      font-family: outfit;
+      font-size: 1.5em;
+      width: 300px;
+      height: 2em;
+      padding: 0.5em;
+      cursor: pointer;
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--color-acento);
+      border: var(--color-neon) 0.125em solid;
+      text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+      box-shadow: inset 0 0 0.5em 0 var(--color-neon), 0 0 0.5em 0 var(--color-neon);
+      position: relative;
+    }
 
-}
+    @media (max-width: 480px) {
+      .neon-button {
+        font-size: 1em;
+        width: 7.5em;
+        height: 2.5em;
+        padding: 0.4em;
+        text-align: center;
+        justify-content: center;
+      }
+    }
 
-@media (max-width: 480px) {
-  .neon-button {
-    font-size: 1em;
-    width: 7.5em;
-    height: 2.5em;
-    padding: 0.4em;
-    text-align: center;
-    justify-content: center;
-  }
-}
+    .neon-button::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      background: var(--color-neon);
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+      filter: blur(1em);
+      opacity: 0.7;
+    }
 
-.neon-button::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  background: var(--color-neon);
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-  filter: blur(1em);
-  opacity: 0.7;
-}
+    .neon-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0 0 2em 0.5em var(--color-neon);
+      opacity: 0;
+      background-color: var(--color-neon);
+      z-index: -1;
+      transition: opacity 100ms linear;
+    }
 
-.neon-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0 2em 0.5em var(--color-neon);
-  opacity: 0;
-  background-color: var(--color-neon);
-  z-index: -1;
-  transition: opacity 100ms linear;
-}
+    .neon-button:hover,
+    .neon-button:focus {
+      color: var(--color-textos);
+      text-shadow: none;
+      z-index: 2;
+    }
 
-.neon-button:hover,
-.neon-button:focus {
-  color: var(--color-textos);
-  text-shadow: none;
-  z-index: 2;
-}
+    .neon-button:hover::before,
+    .neon-button:focus::before {
+      opacity: 1;
+    }
 
-.neon-button:hover::before,
-.neon-button:focus::before {
-  opacity: 1;
-}
-
-.neon-button:hover::after,
-.neon-button:focus::after {
-  opacity: 1;
-}
+    .neon-button:hover::after,
+    .neon-button:focus::after {
+      opacity: 1;
+    }
 
 
 
@@ -297,7 +296,7 @@ header nav ul li a:hover {
 }
 
 .main-img {
-  max-width: 80%;
+  max-width: 90%;
   height: 300px;
   border-radius: 20px;
 
@@ -372,7 +371,7 @@ button.next:hover {
   }
 
   .main-img {
-    width: 90%;
+    width: 80%;
     height: auto;
   }
 
